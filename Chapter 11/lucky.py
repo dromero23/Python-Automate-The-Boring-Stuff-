@@ -20,6 +20,7 @@ driver.get(myurl)
 # Retrieve top search result links.
 # the below is equivalent of soup = bs4.BeautifulSoup(res.text) 
 soup = bs4.BeautifulSoup(driver.page_source, 'html.parser')
+#exist out of the webdriver browser
 driver.quit()
  
 # Open a browser tab for each result.
