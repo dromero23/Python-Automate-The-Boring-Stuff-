@@ -30,7 +30,7 @@ def main():
 	for rowNum in range(1,n):
 		for colNum in range(1,sheet.max_column+1):
 			 nsheet[get_column_letter(colNum)+str(rowNum)] = sheet[get_column_letter(colNum)+str(rowNum)].value
-	#TODO: insert the remaining data from nth+m  up to the last row
+	#insert the remaining data from nth+m  up to the last row
 	for rowNum in range(n,sheet.max_row+1):
 		for colNum in range(1,sheet.max_column+1):
 			nsheet[get_column_letter(colNum)+str(rowNum+m)] = sheet[get_column_letter(colNum)+str(rowNum)].value
