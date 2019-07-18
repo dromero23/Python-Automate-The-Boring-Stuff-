@@ -1,6 +1,8 @@
 #!python3 
 #pdfParanoiaReverse - goes through every pdf in a folder and decrypts the PDFs using a passowrd provided on the command line
-import os,PyPDF2, sys
+import os,PyPDF2, sys,logging
+logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s- %(message)s')
+#logging.disable(logging.CRITICAL)
 
 def main():
 	if len(sys.argv)<2:
@@ -16,7 +18,7 @@ def main():
 				if not pdfReader.isEncrypted :
 					continue
 				if not pdfReader.decrypt(r'%s'%sys.argv[1]):
-					print ('Unable to decrypt: ' + filename + ' from path: ' + folderName)
+					logging.debug('Unable to decrypt: ' + filename + ' from path: ' + folderName)
 					continue
 				for pageNum in range(pdfReader.numPages):
 					pdfWriter.addPage(pdfReader.getPage(pageNum))
@@ -25,7 +27,7 @@ def main():
 				pdfWriter.write(resultPDF)
 				resultPDF.close()
 				pdfFile.close()
-				
+	
 
 if __name__ == '__main__':
 	main()
