@@ -23,10 +23,10 @@ def main():
 	print(w[0]['weather'][0]['main'], '-' ,w[0]['weather'][0]['description'])
 	print()
 	print ('Tomorrow around ' + datetime.now().strftime('%H:%M'))
-	print(w[1]['weather'][0]['main'], '-', w[1]['weather'][0]['description'])
+	print(w[8]['weather'][0]['main'], '-', w[8]['weather'][0]['description'])
 	print()
-	print('Day after tomorrow around:' + datetime.now().strftime('%H:%M'))
-	print(w[2]['weather'][0]['main'], '-', w[2]['weather'][0]['description'])	
+	print('Day after tomorrow around ' + datetime.now().strftime('%H:%M'))
+	print(w[16]['weather'][0]['main'], '-', w[16]['weather'][0]['description'])	
 
 if __name__ =='__main__':
 	main()
