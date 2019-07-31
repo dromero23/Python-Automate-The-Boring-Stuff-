@@ -1,0 +1,24 @@
+WebElement test = driver.findElement(By.cssSelector("one-fourth-percent.columns-percent"));
+
+
+Upper element
+ytd-item-section-renderer
+
+div id='contents'
+
+ytd-playlist-video-list-renderer
+
+div id='contents'
+
+div#contents.style-scope.ytd-playlist-video-list-renderer
+
+
+ytd-playlist-video-list-renderer.style-scope.ytd-item-section-render
+
+ytd-playlist-video-renderer.style-scope-ytd-playlist-video-list-renderer
+
+a.yt-simple-endpoint.style-scope.ytd-playlist-video-renderer
+
+
+
+driver.find_element_by_xpath("//a[@class='yt-simple-endpoint style-scope ytd-playlist-video-renderer']")
