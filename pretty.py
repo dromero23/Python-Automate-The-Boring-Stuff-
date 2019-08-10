@@ -12,9 +12,7 @@ def main():
 				time.sleep(.5)
 				print('.', end='',flush=True)
 			time.sleep(.5)
-			print ('\b'*3, end='', flush=True)
-			print (' '*3, end='', flush=True)
-			print ('\b'*3, end='', flush=True)
+			print ('\b'*3+' '*3 +'\b'*3, end='', flush=True)
 	except KeyboardInterrupt:
 		print('\nDone.')
 		
